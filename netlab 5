@@ -1,0 +1,56 @@
+print ("To determine the cost of a data breach in your organization,")
+print ("please provide your industry and the number of records breached.")
+print ("(A breached record is one that contains personally identifiable")
+print ("information, such as SSN, credit card, CVV, etc).")
+print ()
+print ("When asked for 'industry', please indicate one of the following:")
+print ("\tCommunications")
+print ("\tRetail")
+print ("\tPharmaceutical")
+print ("\tEducation")
+industry = ""
+data_set_count = 0
+total = 0
+while industry != "quit":
+ industry = input("\nPlease indicate industry: ")
+ if industry == "Communications":
+ records_breached = input("Enter the number of records breached: ")
+ records_breached = int(records_breached)
+ cost = 219 * records_breached
+ print ("Cost of a", records_breached, "records data breach in", industry,\
+ "is $", cost, ".")
+ data_set_count += 1 
+ total += cost
+ elif industry == "Retail":
+ records_breached = raw_input("Enter the number of records breached: ")
+ records_breached = int(records_breached)
+ cost = 125 * records_breached
+ print ("Cost of a", records_breached, "records data breach in", industry,\
+ "is $", cost, ".")
+ data_set_count += 1 
+ total += cost
+ elif industry == "Pharmaceutical":
+ records_breached = raw_input("Enter the number of records breached: ")
+ records_breached = int(records_breached)
+ cost = 209 * records_breached
+ print ("Cost of a", records_breached, "records data breach in", industry,\
+ "is $", cost, ".")
+ data_set_count += 1 
+ total += cost
+ elif industry == "Education":
+ records_breached = input("Enter the number of records breached: ")
+ records_breached = int(records_breached)
+ cost = 259 * records_breached
+ print ("Cost of a", records_breached, "records data breach in", industry,\
+ "is $", cost, ".")
+ data_set_count += 1 
+ total += cost
+ elif industry == "quit":
+ print ("\nCalculation complete!")
+ else:
+ print ("Industry '", industry, "' not recognized.")
+ print ("Please choose from Communications, Retail, Pharmaceutical or",\
+ "Education")
+print ("Number of breaches:", data_set_count)
+print ("Total cost: $", total)
+print ("Average cost: $", float(total)/data_set_count)
